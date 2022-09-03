@@ -10,14 +10,14 @@ type Props = {
 }
 
 const Editter :React.FC<Props> = ({todo}) => {
-    const handleEdit = (id:number,inputValue:string) => {
+    const handleEdit = (inputValue:string) => {
         todo.inputValue = inputValue;
     }
     return (
         <input
             type="text"
             value={todo.inputValue}
-            onChange={(e) => handleEdit(todo.id, e.target.value)}
+            onChange={(e) => handleEdit(e.target.value)}
             disabled={todo.checked}
         />
     )

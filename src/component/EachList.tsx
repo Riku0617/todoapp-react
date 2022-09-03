@@ -1,4 +1,4 @@
-import { toUnicode } from 'punycode'
+
 import React from 'react'
 import {Delete,Editter} from './index'
 

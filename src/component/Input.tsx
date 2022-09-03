@@ -7,7 +7,7 @@ type Props = {
     setInitValue:React.Dispatch<React.SetStateAction<string>>
 }
 
-const Input:React.FC<Props> = ({inputValue,setInputValue,initValue,setInitValue}) => {
+const Input:React.FC<Props> = ({setInputValue,initValue,setInitValue}) => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
         setInitValue(e.target.value);

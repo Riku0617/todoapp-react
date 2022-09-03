@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Title,Form,EachList, Delete} from './component/index';
 
@@ -19,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h2><Title title="TodoList with React-App"/></h2>
+        <h2><Title title="TodoList with React-App" number={0} /></h2>
         <Form inputValue={inputValue}
               setInputValue={setInputValue}
               initValue = {initValue}
@@ -31,10 +30,7 @@ function App() {
         />
         <ul className="todoList">
           {todos.map((todo) => (
-              <>
               <EachList todo={todo} todos={todos} setTodos={setTodos}/>
-              
-              </>
           ))}
         </ul>
       </div>
